@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Object Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #7C3AED;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .meta-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #7C3AED;
+        }
+        
+        .meta-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        .meta-info strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        .important-notice {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .important-notice h3 {
+            color: #92400e;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .important-notice p {
+            color: #78350f;
+            margin: 0;
+        }
+        
+        h2 {
+            color: #7C3AED;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        h3 {
+            color: #1a1a1a;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 1.05em;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 1.05em;
+        }
+        
+        .highlight-box {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: #065f46;
+            font-weight: 500;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .contact-box h2 {
+            color: #fff;
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-box p {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-box a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🔢</div>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Object Counter Application</p>
+        </div>
+        
+        <div class="meta-info">
+            <p><strong>Application Owner:</strong> Umair Khalid Siddique</p>
+            <p><strong>Contact Email:</strong> umairkhalidsidd@gmail.com</p>
+            <p><strong>Effective Date:</strong> October 22, 2025</p>
+            <p><strong>Last Updated:</strong> October 23, 2025</p>
+        </div>
+        
+        <div class="important-notice">
+            <h3>⚠️ IMPORTANT NOTICE</h3>
+            <p>Object Counter is intended to be used with users' own images and content. Users are responsible for ensuring they have the necessary rights and permissions for any images they process through the Application. By using Object Counter, you agree to these Terms of Service and acknowledge that you have read and understood them.</p>
+        </div>
+        
+        <h2>1. Introduction</h2>
+        <p>Thank you for choosing Object Counter ("Object Counter," "we," "us," "our"). Object Counter is an advanced mobile application for iOS and Android platforms, designed to help you count and track objects in images using manual counting and AI-powered detection features.</p>
+        
+        <p>By downloading, installing, or using the Object Counter mobile application ("Application" or "App"), available through the Apple App Store, Google Play Store, or our website, you acknowledge that you have entered into a binding contract with Object Counter.</p>
+        
+        <p>Your agreement with us includes these Terms of Service and any additional terms you agree to, including our Privacy Policy (collectively referred to as the "Agreements"). If you do not agree with or cannot comply with the Agreements, you must not access or use Object Counter.</p>
+        
+        <p>To use Object Counter, you must:</p>
+        <ol>
+            <li>Be 18 years or older, or have your parent or guardian's consent if you are 13 years or older;</li>
+            <li>Have the legal capacity to enter into a contract with us;</li>
+            <li>Agree to provide accurate registration information and keep it updated.</li>
+        </ol>
+        
+        <h2>2. Changes to the Agreements</h2>
+        <p>We may occasionally make changes to these Terms of Service. When there are significant changes, we will notify you as appropriate under the circumstances, such as:</p>
+        <ul>
+            <li>Displaying a prominent notice within the Application</li>
+            <li>Sending you an email notification</li>
+            <li>Posting an update on our website</li>
+        </ul>
+        
+        <p>Your continued use of Object Counter after the changes will signify your acceptance of the updated terms. If you do not wish to continue using the Application under the new version of the Agreements, you may terminate your account by contacting us or uninstalling the Application.</p>
+        
+        <h2>3. Object Counter Application</h2>
+        
+        <h3>3.1 Free Version</h3>
+        <p>Object Counter is available for free with basic features, including:</p>
+        <ul>
+            <li>Manual object counting in images</li>
+            <li>Project creation and management</li>
+            <li>Limited AI-powered object detection (subject to monthly limits)</li>
+            <li>Limited export capabilities</li>
+            <li>Basic counting tools and features</li>
+        </ul>
+        
+        <p>Free tier users are subject to monthly usage limits as specified in the Application. Technical issues may occur, and we may interrupt access to Object Counter for maintenance or improvements. You may receive notifications about upgrades, new features, or maintenance from Object Counter.</p>
+        
+        <h3>3.2 Premium Version (Pro)</h3>
+        <p>You can upgrade to our Premium version of Object Counter by paying a subscription fee on a monthly, annual, or other recurring basis, as disclosed prior to your purchase. The Premium version offers additional features, including:</p>
+        <ul>
+            <li>Unlimited AI-powered object detection scans</li>
+            <li>Unlimited exports (PDF, PNG)</li>
+            <li>Advanced counting tools</li>
+            <li>Priority customer support</li>
+            <li>All features included in the Free Version</li>
+        </ul>
+        
+        <p>We may change the price for the Premium version, and we will communicate any price changes in advance, along with instructions on how to accept the changes. By continuing to use Object Counter after the price change, you accept the new price. If you disagree with a price change, you can reject it by unsubscribing from the Premium subscription before the change takes effect.</p>
+        
+        <h3>3.3 Subscription Renewal and Cancellation</h3>
+        <p>You understand and agree that your subscription and payment for the Premium version of Object Counter will automatically renew at the end of the current subscription period unless you cancel it before that time.</p>
+        
+        <p>To cancel your subscription:</p>
+        <ul>
+            <li>For iOS: Go to Settings > [Your Name] > Subscriptions > Object Counter, and tap "Cancel Subscription"</li>
+            <li>For Android: Open Google Play Store > Menu > Subscriptions > Object Counter, and tap "Cancel Subscription"</li>
+            <li>Or manage subscriptions through the Settings screen within the Application</li>
+        </ul>
+        
+        <p>The cancellation will take effect at the end of the current subscription period. Please note that we do not provide refunds or credits for partial subscription periods, following standard industry practices.</p>
+        
+        <h2>4. Intellectual Property Rights</h2>
+        <p>Object Counter and all associated intellectual property, including trademarks, patents, copyrights, proprietary code, design elements, and branding ("Object Counter Intellectual Property"), are the exclusive property of Umair Khalid Siddique and Object Counter.</p>
+        
+        <p>We grant you a limited, non-exclusive, non-transferable, and revocable license to use the Object Counter Application solely for counting and tracking objects in your own images ("License"). This License remains effective until terminated by you or Object Counter.</p>
+        
+        <h3>4.1 Copyright and User Content</h3>
+        <p>You acknowledge and warrant that:</p>
+        <ul>
+            <li>You own or have the necessary rights and permissions for all images and content you process using Object Counter</li>
+            <li>You will not use Object Counter to process copyrighted material without proper authorization</li>
+            <li>You are solely responsible for ensuring your use complies with applicable copyright and intellectual property laws</li>
+        </ul>
+        
+        <p>Object Counter is not liable for any copyright infringement or intellectual property violations arising from your use of the Application. We do not store, monitor, or control the images you process, and we have no obligation to protect or enforce copyrights on your behalf.</p>
+        
+        <h3>4.2 Restrictions</h3>
+        <p>Except for the rights explicitly granted in these Agreements, you must not:</p>
+        <ul>
+            <li>Modify, rent, sell, distribute, or create derivative works based on Object Counter</li>
+            <li>Reverse-engineer, decompile, or disassemble the Application</li>
+            <li>Remove or alter any copyright, trademark, or intellectual property notices</li>
+            <li>Transfer or sublicense the Application to any third party</li>
+            <li>Use the Application for any illegal or unauthorized purpose</li>
+        </ul>
+        
+        <h2>5. User-Generated Content</h2>
+        <p>You are solely responsible for all images, content, and data you process using Object Counter ("User Content"). Object Counter is not responsible for User Content, nor do we endorse any content processed through the Application.</p>
+        
+        <p>You retain all ownership rights to your User Content. Object Counter does not claim any ownership of your images, counting results, or projects. As stated in our Privacy Policy, we do not collect, store, or access your User Content.</p>
+        
+        <h2>6. User Guidelines</h2>
+        <p>Object Counter respects all laws, agreements, and intellectual property rights, and we expect you to do the same. The following actions are strictly prohibited:</p>
+        
+        <ul>
+            <li>Using the Application for any illegal activities</li>
+            <li>Processing images or content that infringes on intellectual property rights of others</li>
+            <li>Attempting to reverse-engineer, decompile, or modify the Application</li>
+            <li>Circumventing any technical limitations or security measures</li>
+            <li>Selling, renting, or sublicensing access to the Application</li>
+            <li>Using automated tools (bots, scrapers) to access the Application</li>
+            <li>Sharing account credentials or accessing another user's account without permission</li>
+            <li>Uploading malicious content (malware, viruses, etc.)</li>
+            <li>Using the Application to harass, threaten, or harm others</li>
+            <li>Processing content that is offensive, illegal, pornographic, or violates third-party rights</li>
+        </ul>
+        
+        <p>Violation of these guidelines may result in immediate termination or suspension of your Object Counter account without prior notice.</p>
+        
+        <h2>7. Third-Party Services</h2>
+        <p>Object Counter integrates with certain third-party services to provide enhanced functionality:</p>
+        
+        <h3>7.1 AI-Powered Detection</h3>
+        <p>When you use AI-powered object detection features, images may be temporarily processed by OpenAI's Vision API. By using this feature, you acknowledge and agree to the temporary processing of your images by this third-party service. Images are not stored after processing is complete.</p>
+        
+        <h3>7.2 Payment Processing</h3>
+        <p>In-app purchases and subscriptions are processed through Apple App Store (iOS) and Google Play Store (Android), as well as RevenueCat for subscription management. These services have their own terms of service and privacy policies.</p>
+        
+        <h3>7.3 Third-Party Liability</h3>
+        <p>Object Counter is not responsible or liable for any third-party services, their content, or their practices. Your use of third-party services is governed by their respective terms and policies.</p>
+        
+        <h2>8. Service Limitations and Modifications</h2>
+        <p>Object Counter will make reasonable efforts to ensure the continuous operation of the Application. However, technical difficulties, maintenance, updates, or changes in laws and regulations may result in temporary interruptions.</p>
+        
+        <p>We reserve the right to:</p>
+        <ul>
+            <li>Modify or discontinue features of the Application, temporarily or permanently</li>
+            <li>Implement usage limits or restrictions</li>
+            <li>Update the Application to comply with legal or regulatory requirements</li>
+            <li>Interrupt service for maintenance or improvements</li>
+        </ul>
+        
+        <p>We will provide advance notice where possible, but Object Counter shall not be liable for any interruption, modification, or discontinuation of the Application or its features, except where prohibited by law.</p>
+        
+        <h2>9. Customer Support</h2>
+        <p>For customer support inquiries, questions, or issues related to Object Counter, please contact us at:</p>
+        <p><strong>Email:</strong> umairkhalidsidd@gmail.com</p>
+        
+        <p>While we will make reasonable efforts to respond to all inquiries within a reasonable timeframe, we do not guarantee specific response times. Premium subscribers may receive priority support.</p>
+        
+        <h2>10. Term and Termination</h2>
+        <p>These Terms of Service will remain in effect until terminated by either you or Object Counter.</p>
+        
+        <h3>10.1 Termination by You</h3>
+        <p>You may terminate your agreement with us at any time by:</p>
+        <ul>
+            <li>Uninstalling the Application from your device</li>
+            <li>Canceling your Premium subscription (if applicable)</li>
+            <li>Contacting us to request account deletion</li>
+        </ul>
+        
+        <h3>10.2 Termination by Us</h3>
+        <p>We may terminate or suspend your access to Object Counter immediately, without prior notice or liability, for any reason, including but not limited to:</p>
+        <ul>
+            <li>Breach of these Terms of Service</li>
+            <li>Violation of applicable laws or regulations</li>
+            <li>Fraudulent or illegal activity</li>
+            <li>Abuse of the Application or its features</li>
+        </ul>
+        
+        <h3>10.3 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+            <li>Your license to use Object Counter will immediately cease</li>
+            <li>You must stop using the Application and may delete it from your device</li>
+            <li>No refunds will be provided for any amounts already paid, to the fullest extent permitted by law</li>
+            <li>Certain provisions (including liability limitations, disclaimers, and indemnification) will survive termination</li>
+        </ul>
+        
+        <h2>11. Warranty Disclaimer</h2>
+        <p>YOU UNDERSTAND AND AGREE THAT THE OBJECT COUNTER APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT ANY EXPRESS OR IMPLIED WARRANTY OR CONDITION OF ANY KIND.</p>
+        
+        <p>To the fullest extent permitted by law, Object Counter disclaims all warranties, including but not limited to:</p>
+        <ul>
+            <li>Merchantability, fitness for a particular purpose, or non-infringement</li>
+            <li>Uninterrupted, secure, or error-free operation</li>
+            <li>Accuracy or reliability of results</li>
+            <li>Freedom from malware or harmful components</li>
+        </ul>
+        
+        <p>Object Counter does not guarantee that:</p>
+        <ul>
+            <li>The Application will meet your specific requirements</li>
+            <li>AI-powered detection will always be 100% accurate</li>
+            <li>The Application will be available at all times</li>
+            <li>Defects will be corrected</li>
+        </ul>
+        
+        <p>This section applies to the fullest extent permitted by applicable law and does not affect your statutory rights as a consumer.</p>
+        
+        <h2>12. Limitation of Liability</h2>
+        <p>TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL OBJECT COUNTER, ITS OWNER, EMPLOYEES, AGENTS, AFFILIATES, OR LICENSORS BE LIABLE FOR:</p>
+        
+        <ol>
+            <li>Any indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to damages for loss of profits, data, use, goodwill, or other intangible losses;</li>
+            <li>Any damages resulting from:
+                <ul>
+                    <li>Your use or inability to use the Application</li>
+                    <li>Unauthorized access to or alteration of your content</li>
+                    <li>Technical issues or interruptions</li>
+                    <li>Errors or inaccuracies in counting or AI detection</li>
+                    <li>Third-party services or content</li>
+                </ul>
+            </li>
+            <li>Aggregate liability for all claims exceeding the amounts you paid to Object Counter in the twelve (12) months prior to the claim.</li>
+        </ol>
+        
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.</p>
+        
+        <h3>12.1 Time Limit for Claims</h3>
+        <p>Any claim against Object Counter must be commenced within one (1) year after the date you first knew or reasonably should have known of the act, omission, or default giving rise to the claim. Failure to assert a claim within this time period shall result in the loss of any right to remedy for that claim.</p>
+        
+        <h2>13. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Object Counter, its owner, employees, agents, and affiliates from and against all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorney fees) arising out of or related to:</p>
+        <ul>
+            <li>Your use of the Application</li>
+            <li>Your breach of these Terms of Service</li>
+            <li>Your violation of any law or regulation</li>
+            <li>Your violation of any rights of a third party, including intellectual property rights</li>
+            <li>Any User Content you process through the Application</li>
+        </ul>
+        
+        <h2>14. Export Control</h2>
+        <p>The Object Counter Application may be subject to export control laws and regulations. You agree to comply with all applicable export and import laws and regulations, and you warrant that you are not located in any country subject to economic sanctions or embargoes.</p>
+        
+        <h2>15. Third-Party Rights</h2>
+        <p>You acknowledge that certain third parties, including app store providers (Apple App Store, Google Play Store) and service providers (RevenueCat, OpenAI), are intended beneficiaries of these Terms and have the right to enforce them directly against you.</p>
+        
+        <h2>16. Entire Agreement</h2>
+        <p>These Terms of Service, together with our Privacy Policy and any other agreements you enter into with Object Counter, constitute the entire agreement between you and Object Counter and supersede any prior agreements, whether written or oral.</p>
+        
+        <h2>17. Severability and Waiver</h2>
+        <p>If any provision of these Terms is held invalid or unenforceable, that provision will be enforced to the maximum extent permitted by law, and the remaining provisions will remain in full force and effect.</p>
+        
+        <p>The failure of Object Counter to enforce any right or provision of these Terms will not constitute a waiver of that right or provision.</p>
+        
+        <h2>18. Assignment</h2>
+        <p>Object Counter may assign these Terms or any rights under them without restriction. You may not assign these Terms or transfer any rights to any third party without our prior written consent.</p>
+        
+        <h2>19. Governing Law</h2>
+        <p>These Terms of Service shall be governed by and construed in accordance with the laws of the jurisdiction in which the owner resides, without regard to conflict of law principles.</p>
+        
+        <p>Any disputes arising from these Terms or your use of Object Counter shall be resolved in the courts of competent jurisdiction in that location.</p>
+        
+        <h2>20. Dispute Resolution</h2>
+        <p>If you have any dispute with Object Counter, we encourage you to contact us first at umairkhalidsidd@gmail.com to attempt to resolve the issue informally.</p>
+        
+        <p>If we cannot resolve the dispute informally, you and Object Counter agree that any dispute, claim, or controversy will be resolved through binding arbitration or small claims court, rather than in courts of general jurisdiction.</p>
+        
+        <h3>20.1 Class Action Waiver</h3>
+        <p>YOU AND OBJECT COUNTER AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</p>
+        
+        <p>The arbitrator may not consolidate more than one person's claims or preside over any form of representative or class proceeding.</p>
+        
+        <h2>21. App Store Terms</h2>
+        <p>If you download Object Counter from the Apple App Store, you acknowledge and agree that:</p>
+        <ul>
+            <li>These Terms are between you and Object Counter, not Apple</li>
+            <li>Apple has no obligation to provide maintenance or support services</li>
+            <li>Apple is not responsible for addressing any claims related to the Application</li>
+            <li>Apple is a third-party beneficiary of these Terms and may enforce them against you</li>
+        </ul>
+        
+        <p>Similar terms apply for downloads from the Google Play Store.</p>
+        
+        <h2>22. Contact Information</h2>
+        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+        <p><strong>Email:</strong> umairkhalidsidd@gmail.com</p>
+        <p><strong>Application Name:</strong> Object Counter</p>
+        
+        <div class="contact-box">
+            <h2>Questions or Concerns?</h2>
+            <p>We're here to help! If you have any questions about these Terms of Service, please don't hesitate to reach out.</p>
+            <a href="mailto:umairkhalidsidd@gmail.com">Contact Us</a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Object Counter. All rights reserved.</p>
+            <p>These Terms of Service are effective as of October 22, 2025.</p>
+            <p>By using Object Counter, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
+        </div>
+    </div>
+</body>
+</html>
