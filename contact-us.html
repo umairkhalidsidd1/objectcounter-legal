@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Object Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #7C3AED;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #7C3AED;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        h3 {
+            color: #1a1a1a;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 1.05em;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 1.05em;
+        }
+        
+        .intro-text {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0 40px 0;
+            border-radius: 8px;
+        }
+        
+        .intro-text p {
+            margin: 0;
+            color: #065f46;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+        
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+        
+        .contact-card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card h3 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-card a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+        
+        .contact-card a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #7C3AED;
+        }
+        
+        .info-box h3 {
+            color: #7C3AED;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .info-box p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .info-box strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        .faq-section {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: #7C3AED;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
+        }
+        
+        .faq-item h3 {
+            color: #7C3AED;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .faq-item p {
+            margin: 0;
+            color: #555;
+        }
+        
+        .important-notice {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .important-notice h3 {
+            color: #92400e;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .important-notice p {
+            color: #78350f;
+            margin: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .footer a {
+            color: #7C3AED;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🔢</div>
+            <h1>Contact Us</h1>
+            <p class="subtitle">We're here to help you count what matters</p>
+        </div>
+        
+        <div class="intro-text">
+            <p>💬 Have questions, feedback, or need assistance? We'd love to hear from you! The Object Counter team is committed to providing excellent support and continuously improving your counting experience.</p>
+        </div>
+        
+        <h2>Get in Touch</h2>
+        <p>Choose the best way to reach us based on your needs:</p>
+        
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="contact-card-icon">📧</div>
+                <h3>Email Support</h3>
+                <p>For general inquiries, technical support, or feedback</p>
+                <a href="mailto:umairkhalidsidd@gmail.com">Send Email</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-card-icon">🐛</div>
+                <h3>Bug Reports</h3>
+                <p>Found a bug? Let us know so we can fix it</p>
+                <a href="mailto:umairkhalidsidd@gmail.com?subject=Bug Report - Object Counter">Report Bug</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-card-icon">💡</div>
+                <h3>Feature Requests</h3>
+                <p>Have an idea for a new feature?</p>
+                <a href="mailto:umairkhalidsidd@gmail.com?subject=Feature Request - Object Counter">Suggest Feature</a>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📬 Contact Information</h3>
+            <p><strong>Developer:</strong> Umair Khalid Siddique</p>
+            <p><strong>Email:</strong> umairkhalidsidd@gmail.com</p>
+            <p><strong>Application:</strong> Object Counter</p>
+            <p><strong>Response Time:</strong> We typically respond within 24-48 hours on business days</p>
+        </div>
+        
+        <h2>What We Can Help With</h2>
+        <p>Our support team can assist you with:</p>
+        <ul>
+            <li><strong>Technical Issues:</strong> App crashes, bugs, or performance problems</li>
+            <li><strong>Account & Subscriptions:</strong> Premium upgrades, billing questions, or subscription management</li>
+            <li><strong>Feature Questions:</strong> How to use specific features or get the most out of Object Counter</li>
+            <li><strong>AI Scanning:</strong> Questions about AI-powered object detection accuracy or limitations</li>
+            <li><strong>Export & Sharing:</strong> Issues with PDF/PNG exports or sharing results</li>
+            <li><strong>Feedback & Suggestions:</strong> Your ideas to improve Object Counter</li>
+            <li><strong>Privacy & Security:</strong> Questions about data privacy and security practices</li>
+            <li><strong>General Inquiries:</strong> Any other questions or concerns</li>
+        </ul>
+        
+        <div class="important-notice">
+            <h3>⚡ Before Contacting Us</h3>
+            <p>For faster support, please check our FAQ section below or try these quick fixes: restart the app, check for updates, or verify your internet connection for AI scanning features.</p>
+        </div>
+        
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I upgrade to Premium?</h3>
+                <p>You can upgrade to Premium directly from the app by tapping the "Upgrade to Pro" button in the Settings screen or when you hit a free tier limit. Choose your preferred subscription plan (monthly or annual) and complete the purchase through the App Store.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <p><strong>For iOS:</strong> Go to Settings > [Your Name] > Subscriptions > Object Counter, and tap "Cancel Subscription".<br><br>
+                <strong>For Android:</strong> Open Google Play Store > Menu > Subscriptions > Object Counter, and tap "Cancel Subscription".<br><br>
+                You can also manage subscriptions through the Settings screen within the app.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Is my data safe and private?</h3>
+                <p>Absolutely! Object Counter does not collect any personal data. All your images, projects, and counting results stay on your device. We don't have access to your data, and we don't track your activity. For AI scanning, images are temporarily processed by OpenAI's Vision API but are not stored. Read our <a href="privacy-policy.html" style="color: #7C3AED; font-weight: 600;">Privacy Policy</a> for complete details.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Why isn't AI scanning working?</h3>
+                <p>AI scanning requires an active internet connection. Make sure you're connected to WiFi or cellular data. If you're on the free tier, you may have reached your monthly AI scan limit. Upgrade to Premium for unlimited AI scans, or wait until your monthly limit resets.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can I get a refund?</h3>
+                <p>Refund requests are handled by the App Store (iOS) or Google Play Store (Android), as they process all payments. To request a refund, please contact Apple or Google support directly. We do not have direct access to process refunds.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How accurate is the AI object detection?</h3>
+                <p>AI-powered detection uses advanced computer vision technology to identify and count objects. Accuracy depends on image quality, lighting, and object clarity. For best results, use well-lit photos with clear, distinct objects. You can always manually adjust counts after AI scanning for perfect accuracy.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Will you add support for [specific feature]?</h3>
+                <p>We're always working to improve Object Counter! We carefully consider all feature requests from our users. Please send your suggestions to our email, and we'll add them to our development roadmap. Popular requests are prioritized for future updates.</p>
+            </div>
+        </div>
+        
+        <h2>Additional Resources</h2>
+        <p>For more information about Object Counter, please visit:</p>
+        <ul>
+            <li><a href="privacy-policy.html" style="color: #7C3AED; font-weight: 600;">Privacy Policy</a> - Learn how we protect your privacy</li>
+            <li><a href="terms-of-service.html" style="color: #7C3AED; font-weight: 600;">Terms of Service</a> - Review our terms and conditions</li>
+            <li><strong>App Store / Google Play:</strong> Leave a review or rating to help others discover Object Counter</li>
+        </ul>
+        
+        <h2>Feedback & Reviews</h2>
+        <p>We greatly appreciate your feedback! If you enjoy using Object Counter, please consider:</p>
+        <ul>
+            <li>⭐ Leaving a 5-star rating on the App Store or Google Play</li>
+            <li>📝 Writing a review to share your experience with others</li>
+            <li>📧 Sending us your success stories and how Object Counter helps you</li>
+            <li>💬 Recommending the app to friends and colleagues who might benefit from it</li>
+        </ul>
+        
+        <div class="info-box">
+            <h3>🌍 Language Support</h3>
+            <p>Object Counter currently supports multiple languages including English and Chinese (Simplified). If you'd like to help translate Object Counter into your language or report translation issues, please contact us at <strong>umairkhalidsidd@gmail.com</strong>.</p>
+        </div>
+        
+        <h2>Business Inquiries</h2>
+        <p>For partnership opportunities, business inquiries, or press requests, please contact us at:</p>
+        <p><strong>Email:</strong> umairkhalidsidd@gmail.com</p>
+        <p><strong>Subject:</strong> Business Inquiry - Object Counter</p>
+        
+        <div class="footer">
+            <p>© 2025 Object Counter. All rights reserved.</p>
+            <p>Developed by Umair Khalid Siddique</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html">Privacy Policy</a> • 
+                <a href="terms-of-service.html">Terms of Service</a> • 
+                <a href="contact-us.html">Contact Us</a>
+            </p>
+            <p style="margin-top: 15px; color: #999; font-size: 0.9em;">
+                Last Updated: October 23, 2025
+            </p>
+        </div>
+    </div>
+</body>
+</html>
